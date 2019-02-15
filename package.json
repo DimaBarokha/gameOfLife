@@ -18,6 +18,13 @@
   },
   "homepage": "https://github.com/DimaBarokha/gameOfLife#readme",
   "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.13.0",
@@ -28,9 +35,8 @@
     "prettier-eslint": "^8.8.2"
   },
   "lint-staged": {
-    "*.{js}": [
-      "./node_modules/.bin/eslint js/index.js",
-      "./node_modules/.bin/prettire --write",
+    "*.js": [
+      "eslint js/index.js",
       "git add"
     ]
   }
