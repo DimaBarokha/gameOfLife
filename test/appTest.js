@@ -1,4 +1,4 @@
-const { assert }= require('chai').assert;
+const assert = require('chai').assert;
 const index = require('../src/js/common.js');
 
 describe('Index',function () {
